@@ -7,7 +7,11 @@ import router from './router'
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
+    data: {
+        d: "ddd"
+    },
     router,
     template: '<App/>',
     components: {App},
-})
+});
+

@@ -1,6 +1,6 @@
 <template>
     <div class="foot-bar">
-        <router-link v-for="nav in navList" :to="nav.href">{{nav.name}}</router-link>
+        <router-link v-for="nav in navList" :to="nav.href" message="hello!">{{message}}{{nav.name}}</router-link>
     </div>
 </template>
 
@@ -12,7 +12,7 @@
                 navList: [
                     {
                         name: '微信',
-                        href: '/wechat'
+                        href: '/chatList'
                     },
                     {
                         name: '通讯录',
@@ -27,6 +27,12 @@
                         href: '/my'
                     }
                 ]
+            }
+        },
+        props: ['message'],
+        methods: {
+            aa: function () {
+                $.alert("1");
             }
         }
     }

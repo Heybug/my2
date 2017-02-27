@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import home from '@/components/home'
-import weChat from '@/components/weChat'
+import chatList from '@/components/chatList'
+import chat from '@/components/chat'
 import contacts from '@/components/contacts'
 import find from '@/components/find'
 import my from '@/components/my'
@@ -16,8 +17,8 @@ export default new Router({
             component: home,
             children: [
                 {
-                    path: 'wechat',
-                    component: weChat,
+                    path: 'chatList',
+                    component: chatList,
                 },
                 {
                     path: 'contacts',
@@ -32,9 +33,14 @@ export default new Router({
                     component: my,
                 },
             ]
-        }, {
+        },
+        {
             path: '/my/info',
             component: info
+        },
+        {
+            path: '/chatList/chat',
+            component: chat,
         }
     ]
-})
+});
