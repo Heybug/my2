@@ -1,6 +1,6 @@
 # my2
 
-> test
+> test..
 
 ## Build Setup
 
